@@ -1,0 +1,15 @@
+﻿@using Stimulsoft.Report.Mvc;
+@{Layout = null;}
+<html>
+<head>
+    <title>عنوان</title>
+</head>
+<body>
+    @Html.Stimulsoft().StiMvcViewer(new StiMvcViewerOptions()
+{
+    Theme = StiTheme.Office2013,
+    ActionGetReportSnapshot = "StiReport",
+    ActionViewerEvent = "ViewerEvent",
+})
+</body>
+</html>
