@@ -10,6 +10,7 @@ namespace StimulsoftInASP.NetMVC.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
@@ -33,6 +34,7 @@ namespace StimulsoftInASP.NetMVC.Controllers
             var mainReport = new Stimulsoft.Report.StiReport();
             mainReport.Load(Server.MapPath("~/Files/Report.mrt"));
             mainReport.Compile();
+            mainReport["DateTimeNow"] = DateTime.UtcNow;
             mainReport.RegBusinessObject("persons_business", persons);
             return Stimulsoft.Report.Mvc.StiMvcViewer.GetReportSnapshotResult(mainReport);
         }

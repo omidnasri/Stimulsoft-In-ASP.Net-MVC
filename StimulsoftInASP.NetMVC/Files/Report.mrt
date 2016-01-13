@@ -21,7 +21,9 @@
     <DataSources isList="true" count="0" />
     <Relations isList="true" count="0" />
     <Report isRef="0" />
-    <Variables isList="true" count="0" />
+    <Variables isList="true" count="1">
+      <value>,DateTimeNow,DateTimeNow,System.String,,False,False</value>
+    </Variables>
   </Dictionary>
   <EngineVersion>EngineV2</EngineVersion>
   <GlobalizationStrings isList="true" count="0" />
@@ -30,62 +32,112 @@
     <Page1 Ref="3" type="Page" isKey="true">
       <Border>None;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="2">
-        <Header Ref="4" type="HeaderBand" isKey="true">
+      <Components isList="true" count="3">
+        <ColumnHeaderBand1 Ref="4" type="Stimulsoft.Report.Components.StiColumnHeaderBand" isKey="true">
+          <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
-          <ClientRectangle>0,0.2,7.72,0.3</ClientRectangle>
+          <ClientRectangle>0,0.2,7.72,1</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2.4,0.3,2.8,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,28,Bold</Font>
+              <Guid>ca8458dad31740ad8d348d40e60f48bb</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>Report</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="6" type="Text" isKey="true">
+              <Border>None;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0.3,0.4,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>{DateTimeNow}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text2>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ColumnHeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </ColumnHeaderBand1>
+        <Header Ref="7" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.6,7.72,0.3</ClientRectangle>
           <Components isList="true" count="4">
-            <Headerpersons_business_Id Ref="5" type="Text" isKey="true">
+            <Headerpersons_business_Id Ref="8" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0,0,1.9,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Headerpersons_business_Id</Name>
               <Page isRef="3" />
-              <Parent isRef="4" />
+              <Parent isRef="7" />
               <Text>Id</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </Headerpersons_business_Id>
-            <Headerpersons_business_FirstName Ref="6" type="Text" isKey="true">
+            <Headerpersons_business_FirstName Ref="9" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>1.9,0,1.9,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Headerpersons_business_FirstName</Name>
               <Page isRef="3" />
-              <Parent isRef="4" />
+              <Parent isRef="7" />
               <Text>FirstName</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </Headerpersons_business_FirstName>
-            <Headerpersons_business_LastName Ref="7" type="Text" isKey="true">
+            <Headerpersons_business_LastName Ref="10" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>3.8,0,1.9,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Headerpersons_business_LastName</Name>
               <Page isRef="3" />
-              <Parent isRef="4" />
+              <Parent isRef="7" />
               <Text>LastName</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </Headerpersons_business_LastName>
-            <Headerpersons_business_Gender Ref="8" type="Text" isKey="true">
+            <Headerpersons_business_Gender Ref="11" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>5.7,0,2,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Headerpersons_business_Gender</Name>
               <Page isRef="3" />
-              <Parent isRef="4" />
+              <Parent isRef="7" />
               <Text>Gender</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
@@ -97,66 +149,74 @@
           <Page isRef="3" />
           <Parent isRef="3" />
         </Header>
-        <Data Ref="9" type="DataBand" isKey="true">
+        <Data Ref="12" type="DataBand" isKey="true">
           <Brush>Transparent</Brush>
           <BusinessObjectGuid>32e1c42fec5b48f2a68646d1568c0e6b</BusinessObjectGuid>
-          <ClientRectangle>0,0.9,7.72,0.3</ClientRectangle>
+          <ClientRectangle>0,2.3,7.72,0.3</ClientRectangle>
           <Components isList="true" count="4">
-            <Datapersons_business_Id Ref="10" type="Text" isKey="true">
+            <Datapersons_business_Id Ref="13" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,1.9,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Datapersons_business_Id</Name>
               <Page isRef="3" />
-              <Parent isRef="9" />
+              <Parent isRef="12" />
               <Text>{persons_business.Id}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </Datapersons_business_Id>
-            <Datapersons_business_FirstName Ref="11" type="Text" isKey="true">
+            <Datapersons_business_FirstName Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>1.9,0,1.9,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Datapersons_business_FirstName</Name>
               <Page isRef="3" />
-              <Parent isRef="9" />
+              <Parent isRef="12" />
               <Text>{persons_business.FirstName}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </Datapersons_business_FirstName>
-            <Datapersons_business_LastName Ref="12" type="Text" isKey="true">
+            <Datapersons_business_LastName Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>3.8,0,1.9,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Datapersons_business_LastName</Name>
               <Page isRef="3" />
-              <Parent isRef="9" />
+              <Parent isRef="12" />
               <Text>{persons_business.LastName}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
               <VertAlignment>Center</VertAlignment>
             </Datapersons_business_LastName>
-            <Datapersons_business_Gender Ref="13" type="Text" isKey="true">
+            <Datapersons_business_Gender Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>5.7,0,2,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,8</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Datapersons_business_Gender</Name>
               <Page isRef="3" />
-              <Parent isRef="9" />
+              <Parent isRef="12" />
               <Text>{persons_business.Gender}</Text>
               <TextBrush>Black</TextBrush>
               <TextOptions>HotkeyPrefix=None, LineLimit=False, RightToLeft=False, Trimming=None, WordWrap=True, Angle=0, FirstTabOffset=40, DistanceBetweenTabs=20,</TextOptions>
@@ -180,13 +240,13 @@
       <PageWidth>8.5</PageWidth>
       <PaperSize>Letter</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="14" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="17" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
   </Pages>
-  <PrinterSettings Ref="15" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="18" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -198,10 +258,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/12/2016 6:02:50 PM</ReportChanged>
+  <ReportChanged>1/13/2016 8:32:32 PM</ReportChanged>
   <ReportCreated>1/12/2016 6:02:05 PM</ReportCreated>
-  <ReportFile />
-  <ReportGuid>b2e6417562554f2fbcc2ccbf209a6ced</ReportGuid>
+  <ReportFile>E:\Project\GitHub\StimulsoftInASP.NetMVC\StimulsoftInASP.NetMVC\Files\Report.mrt</ReportFile>
+  <ReportGuid>0772d83696944ab2815b5fb4ec8587f9</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Inches</ReportUnit>
   <ReportVersion>2014.3.0</ReportVersion>
@@ -224,7 +284,7 @@ namespace Reports
         }
 
         #region StiReport Designer generated code - do not modify
-        #endregion StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
     }
 }
 </Script>
