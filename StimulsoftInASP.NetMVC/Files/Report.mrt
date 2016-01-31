@@ -22,7 +22,7 @@
     <Relations isList="true" count="0" />
     <Report isRef="0" />
     <Variables isList="true" count="1">
-      <value>,DateTimeNow,DateTimeNow,System.String,,False,False</value>
+      <value>,DateTimeNow,DateTimeNow,System.DateTime,_x0031__x002F_13_x002F_2016_x0020_8:39:22_x0020_PM,False,False</value>
     </Variables>
   </Dictionary>
   <EngineVersion>EngineV2</EngineVersion>
@@ -56,7 +56,6 @@
               <VertAlignment>Center</VertAlignment>
             </Text1>
             <Text2 Ref="6" type="Text" isKey="true">
-              <Border>None;Black;1;Solid;False;4;Black</Border>
               <Brush>Transparent</Brush>
               <ClientRectangle>0.3,0.4,1.8,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
@@ -258,10 +257,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/13/2016 8:32:32 PM</ReportChanged>
+  <ReportChanged>1/13/2016 8:39:23 PM</ReportChanged>
   <ReportCreated>1/12/2016 6:02:05 PM</ReportCreated>
   <ReportFile>E:\Project\GitHub\StimulsoftInASP.NetMVC\StimulsoftInASP.NetMVC\Files\Report.mrt</ReportFile>
-  <ReportGuid>0772d83696944ab2815b5fb4ec8587f9</ReportGuid>
+  <ReportGuid>cee079f82c0d450f9f362e74b2c2ba3c</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Inches</ReportUnit>
   <ReportVersion>2014.3.0</ReportVersion>

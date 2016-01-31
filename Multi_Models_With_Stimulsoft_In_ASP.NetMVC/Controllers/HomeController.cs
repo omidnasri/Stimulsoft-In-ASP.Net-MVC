@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Stimulsoft.Report;
-using Stimulsoft.Report.CodeDom;
-using StimulsoftInASP.NetMVC.Models;
 
-namespace StimulsoftInASP.NetMVC.Controllers
+namespace Multi_Models_With_Stimulsoft_In_ASP.NetMVC.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,24 +19,16 @@ namespace StimulsoftInASP.NetMVC.Controllers
         /// <returns></returns>
         public virtual ActionResult StiReport()
         {
-            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("fa-IR");
-            
-            // List of persons: 
-            // you can change the following list to list of persons that get from database.
-            var persons = new List<Models.Person>()
+            using (var db = new Models.DBContext())
             {
-                new Person() {Id = 0, FirstName = "sadar", LastName = "marvati", Gender = true}
-                , new Person() {Id = 1, FirstName = "omid", LastName = "nasri", Gender = true}
-                 , new Person() {Id = 2, FirstName = "hana", LastName = "akbari", Gender = false}
-                  , new Person() {Id = 3, FirstName = "ali", LastName = "jahani", Gender = true }
-                   , new Person() {Id = 4, FirstName = "sara", LastName = "sabori", Gender = false }
-            };
-            var mainReport = new Stimulsoft.Report.StiReport();
-            mainReport.Load(Server.MapPath("~/Files/Report.mrt"));
-            mainReport.Compile();
-            mainReport["DateTimeNow"] = DateTime.UtcNow;
-            mainReport.RegBusinessObject("persons_business", persons);
-            return Stimulsoft.Report.Mvc.StiMvcViewer.GetReportSnapshotResult(mainReport);
+                var obj = db.Provinces.Select(z => new {ProvinceName = z.Name, Citys= z.Citys}).ToList();
+                var mainReport = new StiReport();
+                mainReport.Load(Server.MapPath("~/Files/Report.mrt"));
+                mainReport.Compile();
+                mainReport["DateTimeNow"] = DateTime.UtcNow;
+                mainReport.RegBusinessObject("ProvincesWithCitys", obj);
+                return Stimulsoft.Report.Mvc.StiMvcViewer.GetReportSnapshotResult(HttpContext, mainReport);
+            }
         }
         /// <summary>
         /// 
